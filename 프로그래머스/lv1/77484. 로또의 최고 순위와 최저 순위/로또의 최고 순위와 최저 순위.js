@@ -1,9 +1,9 @@
 function solution(lottos, win_nums) {
      let answer = [];
-      let   random=0;
-     let   count =0;
+     let random=0;
+     let count =0;
         for(i = 0; i<lottos.length; i++){
-                  
+                
             for(j = 0; j<lottos.length; j++){
                        if(lottos[i]==0){
                             random++;
@@ -25,8 +25,6 @@ function solution(lottos, win_nums) {
             if(answer[0]>= 7){
                 answer[0] = 6;
             }
-        
-   //     System.out.println(random);
-  //      System.out.println(count);
+
         return answer;
 }
