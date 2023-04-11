@@ -1,8 +1,6 @@
 function solution(n, m) {
     var answer = [];
-    
-    
-    
+      
     let result = rotate(m,n)
     console.log(result)
     
@@ -20,9 +18,6 @@ function rotate(large , small){
         return small;
     }
     
-    
     return rotate(small, temp)
-    
-    
     
 }
