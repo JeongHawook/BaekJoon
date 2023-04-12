@@ -1,10 +1,23 @@
 function solution(sizes) {
-    const rotated = sizes.map(([w, h]) => w < h ? [h, w] : [w, h]);
+    var answer = 0;
 
-    let maxSize = [0, 0];
-    rotated.forEach(([w, h]) => {
-        if (w > maxSize[0]) maxSize[0] = w;
-        if (h > maxSize[1]) maxSize[1] = h;
-    })
-    return maxSize[0]*maxSize[1];
+
+    newSize = sizes.map(([H,V])=> {
+        if(H < V) {
+            return [V,H] 
+        }else{
+            return [H,V]
+        }
+    })//map은 새로 메모리 생성!!
+    console.log([...newSize])
+    
+    let max = [0,0];
+    
+    newSize.map(([H,V])=>{ //forEach는 메모리 생성 ㄴㄴ!!
+        if(H > max[0]) max[0] = H;
+        if(V > max[1]) max[1] = V;       
+    })  
+    
+    console.log(newSize)
+    return max[0]*max[1];
 }
