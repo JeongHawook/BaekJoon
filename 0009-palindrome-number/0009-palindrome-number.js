@@ -3,10 +3,18 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    let arr = x.toString().split("").reverse().join("")
-    if(arr==x){
-        return true
-    }else{
-        return false;
-    }
+  if( x < 0 || (x!==0 && x%10 == 0) ){
+     return false;
+     }
+  let num = x;
+  let reverse = 0;
+    while(num>0){
+          
+    reverse = reverse * 10 + num%10
+    num = Math.floor(num/10)      
+          
+         
+          
+          }
+    return x===reverse
 };
