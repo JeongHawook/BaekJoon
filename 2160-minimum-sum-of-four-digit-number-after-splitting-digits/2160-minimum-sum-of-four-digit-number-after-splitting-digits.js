@@ -3,8 +3,6 @@
  * @return {number}
  */
 var minimumSum = function(num) {
-    let num1 = num.toString().split('').sort()
-    let num2 =(num1[0]*10+num1[2]*1) + (num1[1]*10+num1[3]*1)
-    console.log(num2)
-    return num2
+  num = num.toString().split("").sort();
+    return (Number(num[0]+num[2]) + Number(num[1]+num[3]) )
     };
